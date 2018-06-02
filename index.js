@@ -25,7 +25,7 @@ function generateProgressString() {
 function renderStartPage() {
   generateScoreString();
   generateProgressString();
-  $('h2').removeClass('hidden');
+  $('.mainh2').removeClass('hidden');
   $('div.finalResult').html('');
   $('form').removeClass('add-background');
   $('.content').removeClass('hidden');
@@ -61,18 +61,19 @@ function generateQuestionElement(questionObject) {
   return ` 
       <legend class="question">${questionObject.question}</legend>
        <label for="answer1">
-      <input type="radio" name="answer" id="answer1" value=0 required>
+      <input type="radio" role="radiogroup" name="answer" id="answer1" value=0 aria-labelledby="radioId" required>
        ${questionObject.answers[0]}</label>
       <label for="answer2">
-      <input type="radio" name="answer" id="answer2" value=1 required>
+      <input type="radio" role="radiogroup" name="answer" id="answer2" value=1 aria-labelledby="radioId" required>
       ${questionObject.answers[1]}</label>
       <label for="answer3">
-      <input type="radio" name="answer" id="answer3" value=2 required>
+      <input type="radio" role="radiogroup" name="answer"  id="answer3" value=2 aria-labelledby="radioId" required>
       ${questionObject.answers[2]}</label>
       <label for="answer4">
-      <input type="radio" name="answer" id="answer4" value=3 required>
+      <input type="radio" role="radiogroup" name="answer"  id="answer4" value=3 aria-labelledby="radioId" required>
       ${questionObject.answers[3]}</label> 
-      <button type="submit" class="answer-button">Submit</button>`;
+      <button type="submit" class="answer-button">Submit</button>
+      `;
 }
 
 //display the question content and increase progress display
@@ -88,9 +89,9 @@ function renderQuestion() {
 function displayFinalResults() {
       $('div.content').addClass('hidden');
       if (playerScore < 7){
-         $('div.finalResult').html(`<h3>${playerScore} out of 10, <br>time to watch Pride and Prejudice again!</h3><img src="https://cdn3.iconfinder.com/data/icons/watercolorcafe/128/teacup.png" alt="A teacup"><button type="submit" class="startover">Start Over</button>`);
+         $('div.finalResult').html(`<h2 class="formh2">${playerScore} out of 10, <br>time to watch Pride and Prejudice again!</h2><img src="https://cdn3.iconfinder.com/data/icons/watercolorcafe/128/teacup.png" alt="A teacup"><button type="submit" class="startover">Start Over</button>`);
       } else {
-         $('div.finalResult').html(`<h3>Elizabeth is proud!<br> You scored ${playerScore} out of 10. </h3><img src="https://cdn3.iconfinder.com/data/icons/watercolorcafe/128/teacup.png" alt="A dainty teacup drawing"><button type="submit" class="startover">Start Over</button>`);
+         $('div.finalResult').html(`<h2 class="formh2">Elizabeth is proud!<br> You scored ${playerScore} out of 10. </h2><img src="https://cdn3.iconfinder.com/data/icons/watercolorcafe/128/teacup.png" alt="A dainty teacup drawing"><button type="submit" class="startover">Start Over</button>`);
       }
   }
 
@@ -100,7 +101,7 @@ function handleCommenceNextButton() {
   $('.question-form').on('click', '.proceed-button', function(event) { 
     event.preventDefault();
     $('form').addClass('add-background');
-    $('h2').addClass('hidden');
+    $('.mainh2').addClass('hidden');
     if (gameProgress < questionArray.length) {
       renderQuestion();
       $('.results').addClass('hidden'); 
@@ -114,7 +115,7 @@ function handleCommenceNextButton() {
 //move if to correct/incorrect 
 function displayCorrectResult() {
    toggleHiddenClass();
-  $('.results').html('<h3>Capital! Capital!<br> You\'re making fine progress.</h3>');
+  $('.results').html('<h2 class="formh2">Capital! Capital!<br> You\'re making fine progress.</h2>');
    if (gameProgress == questionArray.length) {
      $('.proceed-button').html('View Results');
      $('.proceed-button').addClass('view-results');
@@ -123,7 +124,7 @@ function displayCorrectResult() {
 
 function displayIncorrectResult(rightAnswer) {
    toggleHiddenClass();
-  $('.results').html(`<h3>Incorrect!<br> The correct answer is ${(questionArray[gameProgress - 1]).answers[rightAnswer]}.</h3>`); 
+  $('.results').html(`<h2 class="formh2">Incorrect!<br> The correct answer is ${(questionArray[gameProgress - 1]).answers[rightAnswer]}.</h2>`); 
   if (gameProgress == questionArray.length) {
      $('.proceed-button').html('View Results');
      $('.proceed-button').addClass('view-results');

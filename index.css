@@ -9,6 +9,12 @@ body {
 header {
   font-family: 'Cinzel Decorative', cursive;
   text-align: center;
+  padding-bottom: 5px;
+}
+
+.banner {
+  background-color:  rgb(110, 136, 17, .7);
+  border-radius: 5px;
 }
 
 main {
@@ -77,7 +83,7 @@ button:hover {
   width: 175px;
 }
 
-h3 {
+.formh2 {
   padding-top: 40px;
   font-size: 22px;
   text-shadow: 1px 1px black;
@@ -151,7 +157,7 @@ form {
   min-height: 350px;
 }
 
-h3 {
+.formh2 {
   font-size: 30px;
 }
 
