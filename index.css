@@ -1,0 +1,180 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+   background: url("https://www.cipd.co.uk/Images/cipd-derbyshire-nottinghamshire_tcm18-7556_w1200_n.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #e9e5e2;
+  margin-top: 30px;
+}
+
+header {
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+
+main {
+  padding-top: 30px;
+}
+
+header {
+  min-height: 60px;
+  padding-top: 5px;
+  text-shadow: 2px 2px black;
+}
+
+.tracking-bar {
+  text-align: center;
+  text-shadow: 2px 2px black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+form { 
+  text-align: center;
+  min-height: 220px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.add-background {
+  background: rgba(110, 116, 145, .8);
+}
+
+button {
+  margin-bottom: 10px;
+  height: 50px;
+  width: 140px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  background: rgb(110, 136, 17);
+  border-radius: 5px;
+  color: #f4f2f0;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.answer-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-div {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+button:hover {
+  background: #50620c;
+}
+
+.view-results {
+  width: 175px;
+}
+
+h3 {
+  padding-top: 40px;
+  font-size: 22px;
+  text-shadow: 1px 1px black;
+}
+
+.hidden {
+  display: none;
+}
+
+label {
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-size: 18px;
+    text-shadow: 1px 1px black;
+}
+
+label:hover {
+  background: #a8abbd;
+  color: #493637;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+
+fieldset {
+  border: none;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+
+.question {
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.startover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background:#936c6e;
+}
+
+.startover:hover {
+  background:#674c4d;
+}
+
+.finalResult {
+  background:rgb(179, 152, 154, .8);
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+/*Screens bigger than 640px */
+@media only screen and (min-width: 640px) {
+ h1 {
+  font-size: 40px;
+}
+
+.tracking-bar {
+  margin-top: 30px;
+}
+
+form {
+  min-height: 350px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+legend {
+  padding-top: 25px;
+}
+
+.question {
+  font-size: 26px;
+}
+
+label {
+  font-size: 22px;
+}
+}
+
+
+
+
+
+
+

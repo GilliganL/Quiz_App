@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A fun Pride and Prejudice trivia game for lovers of the book and screen adaptations.">
+    <title>Pride & Prejudice Quiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Open+Sans" rel="stylesheet">
+    <link href="float-grid.css" rel="stylesheet" type="text/css"/>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <header role="banner">
+      <div class="row">
+        <div class="col-12">
+          <h1>Test your Pride & Prejudice Obsession</h1>
+          <h2 class="hidden">Will you win the favor of Mr. Darcy or have you spent too much time dancing with your silly sisters?</h2>
+        </div>
+      </div>
+      <div class="row tracking-bar">
+        <div class="col-6">
+          <span class="current-score"></span>
+        </div>
+        <div class="col-6">
+          <span class="progress"></span>
+        </div>
+      </div>
+    </header>
+    <main role="main">
+      <div class="row">
+        <div class="col-12 content">
+          <form class="question-form">
+            <h3 class="form-h3"></h3>
+            <div class="form-content">
+              <fieldset class="hidden">
+               
+              </fieldset>
+              <div class="results hidden"></div>
+            </div>
+            <div class="row">
+              <div class="col-12 button-div">
+                <button type="submit" class="proceed-button hidden"></button>
+                
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 finalResult"></div>
+      </div>
+    </main>
+         
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="datastore.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
